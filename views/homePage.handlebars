@@ -1,12 +1,12 @@
 <div class="row">
-  {{#each blogPostData as |blogPost| }}
+  {{#each publicPosts as |blogPost| }}
   <div class=" card mb-4 project">
     <div class="col-md-5">
       <h2>
-        {{blogPost.dataValues.title}}
+        {{blogPost.title}}
       </h2>
       <p>
-        {{blogPost.dataValues.description}}
+        {{blogPost.description}}
       </p>
     </div>
   </div>

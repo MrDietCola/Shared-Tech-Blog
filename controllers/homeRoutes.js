@@ -31,10 +31,33 @@ router.get('/profile/:id', withAuth, async (req, res) => {
 router.get('/homePage', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    const blogPostData = await BlogPost.findAll();
+    const data = await BlogPost.findAll();
+    const blogPosts = data.map(blogpost => blogpost.dataValues);
 
+    const publicPosts = blogPosts.filter(blogpost => blogpost.public === true);
+
+    console.log(publicPosts);
     res.render('homePage', {
-      blogPostData,
+      publicPosts,
+      logged_in: req.session.logged_in,
+      user_id: req.session.user_id
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/create', withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const data = await BlogPost.findAll();
+    const blogPosts = data.map(blogpost => blogpost.dataValues);
+
+    const publicPosts = blogPosts.filter(blogpost => blogpost.public === true);
+
+    console.log(publicPosts);
+    res.render('homePage', {
+      publicPosts,
       logged_in: req.session.logged_in,
       user_id: req.session.user_id
     });
