@@ -30,16 +30,29 @@ const deleteBlogPost = async (id) => {
 
   if (response.ok) {
     document.location.replace('/homePage');
+  }
+};
+
+const editBlogPost = async (id) => {
+  const response = await fetch(`/api/blogPosts/${id}`, {
+    method: 'DELETE',
+  });
+
+  if (response.ok) {
+    document.location.replace('/homePage');
   } else {
     alert('Failed to delete project');
   }
 };
 
-
-
-  $('#delete').on('click', function(event) {
+  $('button').on('click', function(event) {
     event.preventDefault();
-    const id = this.parent().attr('id')
-    console.log(id);
-    // deleteBlogPost()
+    const button = $(this).attr('id')
+    const id = $(this).parent().attr('id')
+
+    if (button === 'edit') {
+      editBlogPost(id)
+    } else if (button === 'delete') {
+      deleteBlogPost(id)
+    }
   })
