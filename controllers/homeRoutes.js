@@ -30,13 +30,11 @@ router.get('/profile/:id', withAuth, async (req, res) => {
 // Use withAuth middleware to prevent access to route
 router.get('/homePage', withAuth, async (req, res) => {
   try {
-    // Find the logged in user based on the session ID
     const data = await BlogPost.findAll();
     const blogPosts = data.map(blogpost => blogpost.dataValues);
 
     const publicPosts = blogPosts.filter(blogpost => blogpost.public === true);
 
-    console.log(publicPosts);
     res.render('homePage', {
       publicPosts,
       logged_in: req.session.logged_in,
