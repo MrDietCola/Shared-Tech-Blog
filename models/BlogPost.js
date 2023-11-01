@@ -11,23 +11,18 @@ BlogPost.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    owner: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     title: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
     description: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
+      type: DataTypes.STRING,
     },
-    date_created: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
+    public: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
-    user_id: {
+    author_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
@@ -40,7 +35,7 @@ BlogPost.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'blog-post',
+    modelName: 'blogpost',
   }
 );
 
