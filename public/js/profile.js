@@ -34,12 +34,12 @@ const deleteBlogPost = async (id) => {
 };
 
 const editBlogPost = async (id) => {
-  const response = await fetch(`/api/blogPosts/${id}`, {
-    method: 'DELETE',
+  const response = await fetch(`/edit/${id}`, {
+    method: 'GET',
   });
 
   if (response.ok) {
-    document.location.replace('/homePage');
+    document.location.replace(`/edit/${id}`);
   } else {
     alert('Failed to delete project');
   }

@@ -66,6 +66,22 @@ router.get('/login', (req, res) => {
   res.render('landingPage');
 });
 
+router.get('/edit/:id', withAuth, async (req, res) => {
+  try {
+    const blogPostData = await BlogPost.findOne({
+      where: {
+        id: req.params.id,
+      },
+    });
+
+    const blogPost = blogPostData.get({ plain: true });
+console.log(blogPost);
+    res.render('edit', { blogPost, logged_in: req.session.logged_in, user_id: req.session.user_id  });
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 router.get('*', async (req, res) => {
   try {
     res.render('landingPage', { 
@@ -75,5 +91,6 @@ router.get('*', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 
 module.exports = router;
