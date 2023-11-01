@@ -19,7 +19,6 @@ router.delete('/:id', async (req, res) => {
     const blogPostData = await BlogPost.destroy({
       where: {
         id: req.params.id,
-        // user_id: req.session.user_id,
       },
     });
 
@@ -28,7 +27,7 @@ router.delete('/:id', async (req, res) => {
       return;
     }
 
-    res.status(200).json(blogPostData);
+    res.status(200).json(blogPostData );
   } catch (err) {
     res.status(500).json(err);
   }

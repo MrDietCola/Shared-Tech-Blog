@@ -29,7 +29,7 @@ const deleteBlogPost = async (id) => {
   });
 
   if (response.ok) {
-    document.location.replace('/homePage');
+    document.location.replace('/profile');
   }
 };
 

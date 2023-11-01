@@ -8,9 +8,9 @@ router.get('/', async (req, res) => {
     });
 });
 
-router.get('/profile/:id', withAuth, async (req, res) => {
+router.get('/profile', withAuth, async (req, res) => {
   try {
-    const blogPostData = await User.findByPk(req.params.id, {
+    const blogPostData = await User.findByPk(req.session.user_id, {
       include: [{ model: BlogPost }]
     });
 
