@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, BlogPost } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
@@ -18,7 +18,14 @@ router.post('/', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   try {
-    const userData = await User.findOne({ where: { email: req.body.email } });
+    const userData = await User.findOne({ 
+      where: { email: req.body.email },
+      include: [
+        {
+          model: BlogPost,
+        },
+      ]
+    });
 
     if (!userData) {
       res
@@ -57,5 +64,21 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
+
+
+router.get('/', async (req, res) => {
+  try {
+    const blogPostData = await User.findAll();
+
+    if (!blogPostData) {
+      res.status(404).json({ message: 'No blogpost found with this id!' });
+      return;
+    }
+
+    res.status(200).json(blogPostData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
 
 module.exports = router;
