@@ -5,7 +5,7 @@
 </div>
 
  {{#each blogPosts as |blogPost| }}
-  <div class="card mb-4 project">
+  {{!-- <div class="card mb-4 project">
     <div class="col-md-5">
       <h2>
         {{blogPost.title}}
@@ -14,7 +14,20 @@
         {{blogPost.description}}
       </p>
     </div>
+  </div> --}}
+  <div class="card">
+    <div class="card-header">
+      {{blogPost.title}}
+    </div>
+    <div class="card-body" id="{{blogPost.id}}">
+      <p class="card-text">{{blogPost.description}}</p>
+      <button type="submit" class="btn btn-primary m-1 bg-danger" id="delete">Delete</button>
+      <button type="submit" class="btn btn-primary m-1" id="edit">Edit</button>
+    </div>
   </div>
+</div>
   {{/each}}
 
-{{!-- <script src="./js/profile.js"></script> --}}
+<script src="./js/profile.js"></script>
+<script src="./js/logout.js"></script>
+

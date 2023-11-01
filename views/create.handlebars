@@ -1,0 +1,20 @@
+<div class="card w-50 m-5" id="{{user_id}}">
+  <input type="text" class="form-control m-1 input-bar" id="blog-title" placeholder="Enter blog Title">
+  <div class="card-body">
+      <textarea id="description" class="form-control m-1 input-bar" name="" id="" cols="30" rows="10"></textarea>
+
+      <button type="submit" class="btn btn-primary m-1" id="submit">Submit</button>
+
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-secondary active">
+          <input type="radio" name="options" id="public" autocomplete="off" checked> Public
+        </label>
+        <label class="btn btn-secondary">
+          <input type="radio" name="options" id="private" autocomplete="off"> Private
+        </label>
+      </div>
+  </div>
+</div>
+
+<script src="./js/create.js"></script>
+<script src="./js/logout.js"></script>
