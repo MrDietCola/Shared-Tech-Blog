@@ -29,6 +29,9 @@ BlogPost.init(
         key: 'id',
       },
     },
+    date_created: {
+      type: DataTypes.STRING,
+    },  
   },
   {
     sequelize,

@@ -3,37 +3,43 @@
     "title": "First Event",
     "description": "This is the description of the first event.",
     "public": true,
-    "author_id": 1
+    "author_id": 1,
+    "date_created": "January 23, 2023"
   },
   {
     "title": "Second Event",
     "description": "Another event with a description.",
     "public": false,
-    "author_id": 1
+    "author_id": 1,
+    "date_created": "January 23, 2023"
   },
   {
     "title": "Third Event",
     "description": "Description for the third event.",
     "public": true,
-    "author_id": 1
+    "author_id": 1,
+    "date_created": "January 23, 2023"
   },
   {
     "title": "Fourth Event",
     "description": null,
     "public": false,
-    "author_id": 1
+    "author_id": 1,
+    "date_created": "January 23, 2023"
   },
   {
     "title": "Fifth Event",
     "description": "Description for the fifth event.",
     "public": true,
-    "author_id": 1
+    "author_id": 1,
+    "date_created": "January 23, 2023"
   },
   {
     "title": "Sixth Event",
     "description": "Another event with a description.",
     "public": false,
-    "author_id": 1
+    "author_id": 1,
+    "date_created": "January 23, 2023"
   }
 ]
 

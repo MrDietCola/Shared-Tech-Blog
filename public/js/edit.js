@@ -6,13 +6,14 @@ const createBlogPost = async () => {
   // Collect values from the login form
   const title = document.querySelector('#blog-title').value.trim();
   const description = document.querySelector('#description').value.trim();
-  const author_id = $('.card').attr('id')
+  const author_id = $('.card').attr('id');
+  const date_created = $('.card').attr('data-created');
 
   if (title && description) {
     // Send a POST request to the API endpoint
     const response = await fetch('/api/blogPosts', {
       method: 'PUT',
-      body: JSON.stringify({ title, description, public, author_id}),
+      body: JSON.stringify({ title, description, public, author_id, date_created}),
       headers: { 'Content-Type': 'application/json' },
     });
 

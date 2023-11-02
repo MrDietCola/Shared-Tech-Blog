@@ -16,7 +16,6 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-dark text-white">
   <a class="navbar-brand mx-5 text-white" href="#">THE TECH POST</a>
-  {{#if logged_in}}
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -24,8 +23,9 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link text-white" href="/homePage">Home</a>
+        <a class="nav-link text-white" href="/">Home</a>
       </li>
+  {{#if logged_in}}
       <li class="nav-item">
         <a class="nav-link text-white" href="/profile">My Posts</a>
       </li>
@@ -35,8 +35,12 @@
       <li class="nav-item">
         <a class="nav-link text-white" href="#" id="logout">Log out</a>
       </li>
-  </div>
+      {{else}}
+      <li class="nav-item">
+        <a class="nav-link text-white" href="/landingPage" id="login">Login</a>
+      </li>
   {{/if}}
+  </div>
 </nav>
 
   {{{ body }}}

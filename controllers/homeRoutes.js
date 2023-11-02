@@ -3,22 +3,23 @@ const { BlogPost, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
-    res.render('landingPage', { 
-      logged_in: req.session.logged_in 
-    });
-});
-
-router.get('/profile', withAuth, async (req, res) => {
   try {
-    const blogPostData = await User.findByPk(req.session.user_id, {
-      include: [{ model: BlogPost }]
+    const data = await BlogPost.findAll({
+      where: { public: true}, 
+      include: [
+        {
+          model: User, 
+          foreignKey: 'author_id',
+          attributes: ['username']
+        }
+      ] 
+      
     });
-
-    const data = blogPostData.get({ plain: true });
-    const blogPosts = data.blogposts
     
-    res.render('profile', {
-      blogPosts,
+    const publicPosts = data.map(blogpost => blogpost.dataValues);
+    console.log(publicPosts);
+    res.render('homePage', {
+      publicPosts,
       logged_in: req.session.logged_in,
       user_id: req.session.user_id
     });
@@ -27,16 +28,23 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
-// Use withAuth middleware to prevent access to route
-router.get('/homePage', withAuth, async (req, res) => {
+router.get('/profile', withAuth, async (req, res) => {
   try {
-    const data = await BlogPost.findAll();
-    const blogPosts = data.map(blogpost => blogpost.dataValues);
+    const blogPostData = await User.findByPk(req.session.user_id, {
+      include: [
+        { 
+          model: BlogPost 
+        }, 
+      ]
+    });
 
-    const publicPosts = blogPosts.filter(blogpost => blogpost.public === true);
-
-    res.render('homePage', {
-      publicPosts,
+    const data = blogPostData.get({ plain: true });
+    const blogPosts = data.blogposts
+    const username = blogPostData.dataValues.username
+    
+    res.render('profile', {
+      blogPosts,
+      username,
       logged_in: req.session.logged_in,
       user_id: req.session.user_id
     });

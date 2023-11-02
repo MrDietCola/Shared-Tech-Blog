@@ -1,8 +1,9 @@
-<div class="row m-4 mx-5">
+<div class="row m-4 mx-5 d-flex flex-column-reverse">
   {{#each publicPosts as |blogPost| }}
-   <div class="card p-0">
-    <div class="card-header px-3">
-      {{blogPost.title}}
+   <div class="card p-0 col-12 shadow">
+    <div class="card-header px-3 d-flex justify-content-between">
+    <h2>{{blogPost.title}}</h2>
+    <p>Posted by {{user.dataValues.username}} on {{blogPost.date_created}}</p>
     </div>
     <div class="card-body" id="{{blogPost.id}}">
       <p class="card-text p-3">{{blogPost.description}}</p>

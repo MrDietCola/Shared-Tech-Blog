@@ -25,3 +25,11 @@ header, .project:not(:last-child) {
   border: 2px solid white;
   background-color: #065b83!important;
 }
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.small-t {
+  font-size: 15px;
+}
