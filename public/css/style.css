@@ -33,3 +33,45 @@ header, .project:not(:last-child) {
 .small-t {
   font-size: 15px;
 }
+
+.none {
+  text-decoration: none;
+  color: white;
+}
+
+.none:hover {
+  text-decoration: none;
+}
+
+.post {
+  margin: 50px 15%;
+}
+
+.bottom-border {
+  border-bottom: 2px solid black;
+}
+
+.mr-50 {
+  margin-right: 100px;
+}
+
+.my-50 {
+  margin-top: 50px;
+}
+
+.mb-10 {
+  padding-bottom: 20px;
+}
+
+.comment {
+  margin: 0 25%;
+}
+
+.home {
+  max-width: 1000px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}

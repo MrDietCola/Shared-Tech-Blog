@@ -1,45 +1,107 @@
 [
   {
-    "title": "First Event",
-    "description": "This is the description of the first event.",
+    "title": "The Future of Artificial Intelligence",
+    "description": "In this blog post, we dive into the exciting world of artificial intelligence and explore the latest advancements and breakthroughs that are shaping the future. From machine learning to deep learning, we'll discuss the potential applications and the impact AI is having on various industries.",
+    "public": true,
+    "author_id": 5,
+    "date_created": "February 15, 2023"
+  },
+  {
+    "title": "Advancements in Virtual Reality",
+    "description": "Join us on a journey through the fascinating world of virtual reality. This blog post covers the recent advancements in VR technology, the development of immersive experiences, and the potential VR holds for gaming, education, and beyond.",
+    "public": true,
+    "author_id": 2,
+    "date_created": "January 28, 2023"
+  },
+  {
+    "title": "Latest Trends in Mobile App Development",
+    "description": "Discover the latest trends in mobile app development in this comprehensive blog post. We'll explore topics such as progressive web apps, augmented reality apps, and the importance of user experience in mobile app design.",
+    "public": true,
+    "author_id": 3,
+    "date_created": "March 9, 2023"
+  },
+  {
+    "title": "Blockchain Technology and Its Applications",
+    "description": "This blog post delves into the world of blockchain technology and its vast range of applications. From cryptocurrencies to supply chain management, we'll uncover the potential of this revolutionary technology and how it's changing industries.",
+    "public": true,
+    "author_id": 9,
+    "date_created": "February 4, 2023"
+  },
+  {
+    "title": "Cybersecurity in a Connected World",
+    "description": "With the world becoming increasingly interconnected, cybersecurity is a hot topic. Join us in this blog post to explore the challenges and solutions in the field of cybersecurity and how individuals and businesses can protect themselves in a connected world.",
     "public": true,
     "author_id": 1,
-    "date_created": "January 23, 2023"
+    "date_created": "January 22, 2023"
   },
   {
-    "title": "Second Event",
-    "description": "Another event with a description.",
-    "public": false,
-    "author_id": 1,
-    "date_created": "January 23, 2023"
+    "title": "Big Data and Machine Learning",
+    "description": "This blog post is your gateway to the world of big data and machine learning. We'll discuss the power of data-driven insights, machine learning algorithms, and how they are driving innovation in various sectors, from healthcare to finance.",
+    "public": true,
+    "author_id": 7,
+    "date_created": "March 5, 2023"
   },
   {
-    "title": "Third Event",
-    "description": "Description for the third event.",
+    "title": "The Internet of Things (IoT)",
+    "description": "Join us as we explore the Internet of Things (IoT) and its role in shaping the future. From smart homes to industrial applications, this blog post covers the exciting possibilities that IoT brings and its impact on daily life.",
+    "public": true,
+    "author_id": 4,
+    "date_created": "February 10, 2023"
+  },
+  {
+    "title": "Cloud Computing and Its Impact",
+    "description": "Cloud computing is a game-changer for businesses and individuals. This blog post discusses the benefits, challenges, and impact of cloud technology. Learn how the cloud is revolutionizing data storage, software delivery, and more.",
+    "public": true,
+    "author_id": 6,
+    "date_created": "January 30, 2023"
+  },
+  {
+    "title": "Emerging Technologies in 5G",
+    "description": "5G is on the horizon, and it promises lightning-fast connectivity. In this blog post, we explore the emerging technologies in 5G networks, from ultra-low latency to the Internet of Things, and how they will reshape communication and technology.",
+    "public": true,
+    "author_id": 8,
+    "date_created": "February 20, 2023"
+  },
+  {
+    "title": "Augmented Reality: Changing the Game",
+    "description": "Augmented reality (AR) is changing the way we interact with the world. Join us for a deep dive into AR technology and its applications, from gaming and education to healthcare. Get ready to embrace a new reality!",
     "public": true,
     "author_id": 1,
-    "date_created": "January 23, 2023"
+    "date_created": "March 1, 2023"
   },
   {
-    "title": "Fourth Event",
-    "description": null,
-    "public": false,
-    "author_id": 1,
-    "date_created": "January 23, 2023"
-  },
-  {
-    "title": "Fifth Event",
-    "description": "Description for the fifth event.",
+    "title": "The Role of AI in Healthcare",
+    "description": "Artificial intelligence is revolutionizing healthcare. In this blog post, we explore the pivotal role of AI in diagnostics, treatment, and healthcare management. Discover how AI is enhancing patient care and medical research.",
     "public": true,
-    "author_id": 1,
-    "date_created": "January 23, 2023"
+    "author_id": 3,
+    "date_created": "January 25, 2023"
   },
   {
-    "title": "Sixth Event",
-    "description": "Another event with a description.",
-    "public": false,
-    "author_id": 1,
-    "date_created": "January 23, 2023"
+    "title": "Smart Cities and Urban Technology",
+    "description": "Cities are getting smarter, and urban technology is at the forefront of this transformation. Join us in this blog post to explore the innovations that are turning cities into smart, efficient, and sustainable hubs for the future.",
+    "public": true,
+    "author_id": 5,
+    "date_created": "January 25, 2023"
+  },
+  {
+    "title": "Tech Startups: Innovations and Challenges",
+    "description": "In this blog post, we take a closer look at the dynamic world of tech startups. We'll discuss the innovations that emerging startups bring to the table and the challenges they face on their journey to success.",
+    "public": true,
+    "author_id": 2,
+    "date_created": "March 15, 2023"
+  },
+  {
+    "title": "The Impact of Tech on Education",
+    "description": "Technology is transforming education. Join us in exploring how tech is reshaping classrooms, online learning, and the future of education. Discover the benefits and potential drawbacks of technology in the educational landscape.",
+    "public": true,
+    "author_id": 9,
+    "date_created": "February 28, 2023"
+  },
+  {
+    "title": "5G and the Internet of Everything",
+    "description": "5G isn't just about faster downloads; it's the backbone of the Internet of Everything (IoE). In this blog post, we delve into the IoE ecosystem and the role of 5G connectivity in connecting everything from devices to vehicles and more.",
+    "public": true,
+    "author_id": 4,
+    "date_created": "March 10, 2023"
   }
 ]
-

@@ -13,5 +13,80 @@
     "username": "Amiko",
     "email": "amiko2k20@aol.com",
     "password": "password12345"
-  }
+  },
+  {
+    "username": "Maxwell",
+    "email": "maxwell34@gmail.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Eleanor",
+    "email": "eleanor@example.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Jackson",
+    "email": "jackson45@hotmail.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Isabella",
+    "email": "isabella2000@aol.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Nathan",
+    "email": "nathan34@gmail.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Olivia",
+    "email": "olivia@example.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Gabriel",
+    "email": "gabriel45@hotmail.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Sophia",
+    "email": "sophia2000@aol.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Liam",
+    "email": "liam34@gmail.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Ava",
+    "email": "ava@example.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Elijah",
+    "email": "elijah45@hotmail.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Mia",
+    "email": "mia2000@aol.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Carter",
+    "email": "carter34@gmail.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Charlotte",
+    "email": "charlotte@example.com",
+    "password": "password12345"
+  },
+  {
+    "username": "Henry",
+    "email": "henry45@hotmail.com",
+    "password": "password12345"
+  }  
 ]

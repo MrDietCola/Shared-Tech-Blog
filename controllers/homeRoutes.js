@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { BlogPost, User } = require('../models');
+const { BlogPost, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -67,7 +67,7 @@ router.get('/create', withAuth, async (req, res) => {
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to homepage
   if (req.session.logged_in) {
-    res.redirect('/homePage');
+    res.redirect('/');
     return;
   }
 
@@ -89,15 +89,42 @@ router.get('/edit/:id', withAuth, async (req, res) => {
   }
 });
 
-router.get('*', async (req, res) => {
+router.get('/post/:id', async (req, res) => {
   try {
-    res.render('landingPage', { 
-      logged_in: req.session.logged_in 
+    const blogPostData = await BlogPost.findOne({
+      where: {
+        id: req.params.id,
+      },
+      include: [
+        { 
+          model: Comment,
+          include: [
+            { 
+              model: User,
+              attributes: ['username']
+            }, 
+          ] 
+        }, 
+      ]    
     });
+
+    const blogPost = blogPostData.get({ plain: true });
+
+    res.render('post', { blogPost, logged_in: req.session.logged_in, user_id: req.session.user_id  });
   } catch (err) {
-    res.status(500).json(err);
+    res.status(400).json(err);
   }
 });
+
+// router.get('*', async (req, res) => {
+//   try {
+//     res.render('landingPage', { 
+//       logged_in: req.session.logged_in 
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 
 module.exports = router;

@@ -37,13 +37,16 @@
       </li>
       {{else}}
       <li class="nav-item">
-        <a class="nav-link text-white" href="/landingPage" id="login">Login</a>
+        <a class="nav-link text-white" href="/login" id="login">Login</a>
       </li>
   {{/if}}
   </div>
 </nav>
-
+<main>
+  
   {{{ body }}}
+
+</main>
    
 {{#if logged_in}}
 <script src="/js/logout.js"></script>
