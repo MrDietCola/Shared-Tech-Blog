@@ -75,7 +75,6 @@ router.get('/edit/:id', withAuth, async (req, res) => {
     });
 
     const blogPost = blogPostData.get({ plain: true });
-console.log(blogPost);
     res.render('edit', { blogPost, logged_in: req.session.logged_in, user_id: req.session.user_id  });
   } catch (err) {
     res.status(400).json(err);

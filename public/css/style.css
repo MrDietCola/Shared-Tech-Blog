@@ -18,5 +18,10 @@ header, .project:not(:last-child) {
 }
 
 .input-bar {
-  width: 95%!important;
+  width: 99%!important;
+}
+
+.selected {
+  border: 2px solid white;
+  background-color: #065b83!important;
 }

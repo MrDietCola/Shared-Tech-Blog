@@ -1,4 +1,6 @@
 let public = true;
+const publicBtn = $('#public');
+const privateBtn = $('#private');
 
 const createBlogPost = async () => {
   // Collect values from the login form
@@ -16,18 +18,22 @@ const createBlogPost = async () => {
 
     if (response.ok) {
       // If successful, redirect the browser to the profile page
-      document.location.replace(`/profile/${author_id}`);
+      document.location.replace(`/profile`);
     } 
   }
 };
 
 $('#public').on('click', function(event) {
   event.preventDefault();
+  privateBtn.removeClass('selected');
+  publicBtn.addClass('selected');
   public = true;
 })
 
 $('#private').on('click', function(event) {
   event.preventDefault();
+  publicBtn.removeClass('selected');
+  privateBtn.addClass('selected');
   public = false;
 })
 
