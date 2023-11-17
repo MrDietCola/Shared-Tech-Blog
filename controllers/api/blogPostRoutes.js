@@ -50,10 +50,18 @@ router.get('/', async (req, res) => {
 
 router.put('/', async (req, res) => {
   try {
-    const updatedBlogPost = await BlogPost.create({
-      ...req.body,
+    const updatedBlogPost = await BlogPost.update({
+      title: req.body.title,
+      description: req.body.description,
+      public: req.body.public,
+      author_id: req.body.author_id,
+      date_created: req.body.date_created
+    },
+      {
+        where: { id: req.body.postId }
+      });
 
-    });
+      console.log(req.body, req.params.id);
 
     res.status(200).json(updatedBlogPost);
   } catch (err) {

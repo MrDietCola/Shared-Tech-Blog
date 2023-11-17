@@ -1,19 +1,21 @@
 let public = true;
 const publicBtn = $('#public');
 const privateBtn = $('#private');
+const postId = $('#blog-title').data('id')
 
-const createBlogPost = async () => {
+const updateBlogPost = async () => {
   // Collect values from the login form
   const title = document.querySelector('#blog-title').value.trim();
   const description = document.querySelector('#description').value.trim();
   const author_id = $('.card').attr('id');
   const date_created = $('.card').attr('data-created');
+  console.log(title,description,author_id,date_created,public,postId);
 
   if (title && description) {
     // Send a POST request to the API endpoint
-    const response = await fetch('/api/blogPosts', {
+    const response = await fetch(`/api/blogPosts`, {
       method: 'PUT',
-      body: JSON.stringify({ title, description, public, author_id, date_created}),
+      body: JSON.stringify({ title, description, public, author_id, date_created, postId}),
       headers: { 'Content-Type': 'application/json' },
     });
 
@@ -40,5 +42,5 @@ $('#private').on('click', function(event) {
 
 $('#submit').on('click', function(event) {
   event.preventDefault();
-  createBlogPost()
+  updateBlogPost()
 })
