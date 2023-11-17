@@ -69,6 +69,7 @@ header, .project:not(:last-child) {
 
 .home {
   max-width: 1000px;
+  min-width: 75%;
 }
 
 main {
