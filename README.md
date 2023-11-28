@@ -1,6 +1,6 @@
 # Shared-Tech-Blog
 
-https://github.com/MrDietCola/Shared-Tech-Blog
+https://github.com/Seidler93/Shared-Tech-Blog
 
 https://serene-cove-59938-85be2bd2a934.herokuapp.com/
 
